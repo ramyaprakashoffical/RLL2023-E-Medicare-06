@@ -1,0 +1,78 @@
+<--Database Structure For E-Medicare By Group - 06 --> 
+ 
+database name --> medicare;
+
+List of  tables;
++--------------------+
+| Tables_in_medicare |
++--------------------+
+| admin              |
+| medicine           |
+| user               |
+| cart               |
+| contactus          |
++--------------------+
+
+
+--> admin table;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| admin_id | int          | NO   | PRI | NULL    | auto_increment |
+| admin    | varchar(200) | YES  |     | NULL    |                |
+| password | varchar(200) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+
+--> medicines table;
++------------------+--------------+------+-----+---------+----------------+
+| Field            | Type         | Null | Key | Default | Extra          |
++------------------+--------------+------+-----+---------+----------------+
+| medicine_id      | int          | NO   | PRI | NULL    | auto_increment |
+| description      | varchar(200) | YES  |     | NULL    |                |
+| expdate          | varchar(200) | YES  |     | NULL    |                |
+| manufacture_date | varchar(200) | YES  |     | NULL    |                |
+| medicine_name    | varchar(200) | YES  | UNI | NULL    |                |
+| price            | int          | NO   |     | NULL    |                |
+| seller           | varchar(200) | YES  |     | NULL    |                |
+| status           | varchar(200) | YES  |     | NULL    |                |
+| type             | varchar(200) | YES  |     | NULL    |                |
++------------------+--------------+------+-----+---------+----------------+
+
+
+
+--> user table;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| user_id    | int          | NO   | PRI | NULL    | auto_increment |
+| age        | int          | NO   |     | NULL    |                |
+| first_name | varchar(200) | YES  |     | NULL    |                |
+| gender     | varchar(200) | YES  |     | NULL    |                |
+| last_name  | varchar(200) | YES  |     | NULL    |                |
+| mobile_no  | varchar(200) | YES  |     | NULL    |                |
+| password   | varchar(200) | YES  |     | NULL    |                |
+| username   | varchar(200) | YES  | UNI | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+
+--> cart table;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| medicine_id   | int          | NO   | PRI | NULL    |       |
+| description   | varchar(200) | YES  |     | NULL    |       |
+| medicine_name | varchar(200) | YES  |     | NULL    |       |
+| price         | int          | NO   |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+
+--> contact_us table;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| c_id        | int          | NO   | PRI | NULL    | auto_increment |
+| contact_no  | bigint       | NO   |     | NULL    |                |
+| description | varchar(200) | YES  |     | NULL    |                |
+| email_id    | varchar(200) | YES  |     | NULL    |                |
+| name        | varchar(200) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
